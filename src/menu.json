@@ -1,0 +1,42 @@
+{
+    "restaurant_name": "Delicious Eats",
+    "menu_items": [
+      {
+        "item_name": "Cheeseburger",
+        "description": "Juicy beef patty with melted cheddar cheese, lettuce, tomato, and special sauce on a toasted bun.",
+        "price": 9.99,
+        "category": "Burgers"
+      },
+      {
+        "item_name": "Margherita Pizza",
+        "description": "Classic Neapolitan-style pizza with fresh mozzarella cheese, San Marzano tomato sauce, and basil leaves.",
+        "price": 12.99,
+        "category": "Pizza"
+      },
+      {
+        "item_name": "Caesar Salad",
+        "description": "Crisp romaine lettuce, garlic croutons, shaved parmesan cheese, and tangy Caesar dressing.",
+        "price": 7.99,
+        "category": "Salads"
+      },
+      {
+        "item_name": "Fish and Chips",
+        "description": "Beer-battered cod fillet with crispy fries, tartar sauce, and lemon wedges.",
+        "price": 11.99,
+        "category": "Seafood"
+      },
+      {
+        "item_name": "Tiramisu",
+        "description": "Classic Italian dessert made with ladyfingers, mascarpone cheese, espresso, and cocoa powder.",
+        "price": 5.99,
+        "category": "Desserts"
+      },
+      {
+        "item_name": "Momo",
+        "description": "famous nepali food",
+        "price": 5.45,
+        "category": "meal"
+      }
+    ]
+  }
+  
