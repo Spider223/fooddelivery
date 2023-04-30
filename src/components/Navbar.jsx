@@ -3,8 +3,13 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { LinkContainer } from "react-router-bootstrap";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 export default function Header() {
+  const logout = () => {
+    localStorage.removeItem("token");
+    window.location.href = "/login";
+  };
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -36,9 +41,31 @@ export default function Header() {
             </Nav>
           </Navbar.Collapse>
           <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>
-              Signed in as: <a href="#login">Mark Otto</a>
-            </Navbar.Text>
+            {localStorage.getItem("token") ? (
+              <div style={{ display: "flex" }}>
+                <Nav>
+                  <LinkContainer to="/register">
+                    <Nav.Link>
+                      {" "}
+                      <AiOutlineShoppingCart style={{ gap: "3rem" }} />
+                      Cart
+                    </Nav.Link>
+                  </LinkContainer>
+                  <Nav.Link onClick={logout}>Logout</Nav.Link>
+                </Nav>
+              </div>
+            ) : (
+              ""
+            )}
+            {!localStorage.getItem("token") ? (
+              <Nav>
+                <LinkContainer to="/register">
+                  <Nav.Link>Register</Nav.Link>
+                </LinkContainer>
+              </Nav>
+            ) : (
+              ""
+            )}
           </Navbar.Collapse>
         </Container>
       </Navbar>
