@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-const dbConnect = async () => {
+const dbConnect = async (req, res) => {
   await mongoose
     .connect(process.env.db)
     .then(async () => {
@@ -11,7 +11,7 @@ const dbConnect = async () => {
         .find({})
         .toArray()
         .then((result) => {
-          //   console.log(result);
+          // console.log(result);
           global.menus = result;
         })
         .catch((err) => {
@@ -19,7 +19,7 @@ const dbConnect = async () => {
         });
     })
     .catch((err) => {
-      console.log(err);
+      console.error(err);
     });
 };
 

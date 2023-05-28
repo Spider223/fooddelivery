@@ -44,7 +44,7 @@ export default function Header() {
             {localStorage.getItem("token") ? (
               <div style={{ display: "flex" }}>
                 <Nav>
-                  <LinkContainer to="/register">
+                  <LinkContainer to="/cart">
                     <Nav.Link>
                       {" "}
                       <AiOutlineShoppingCart style={{ gap: "3rem" }} />

@@ -7,6 +7,7 @@ import ContactUs from "./pages/ContactUs";
 import Policy from "./pages/Policy";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/policy" element={<Policy />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} exact />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
       {/* <Footer /> */}
     </>
