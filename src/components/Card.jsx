@@ -5,7 +5,9 @@ import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../features/cart/cartSlice";
 
-export default function Cards({ item: { name, description, img, options } }) {
+export default function Cards({
+  item: { name, description, img, options, _id },
+}) {
   const [varient, setVarient] = useState("half");
   const [quantity, setQuantity] = useState(1);
 
@@ -26,7 +28,7 @@ export default function Cards({ item: { name, description, img, options } }) {
       navigate("/login");
     } else {
       dispatch(
-        addToCart({ name, description, img, options, varient, quantity })
+        addToCart({ name, description, img, options, varient, quantity, _id })
       );
     }
   };
@@ -78,7 +80,8 @@ export default function Cards({ item: { name, description, img, options } }) {
               Price: {options[0][varient] * quantity}
             </Col>
             <Col md={6}>
-              <Button onClick={checkUser}>Add to Cart</Button>
+              {/* <Button onClick={checkUser}>fsdaf</Button> */}
+              <button onClick={checkUser}>Add to cart</button>
             </Col>
           </Row>
         </Card.Body>

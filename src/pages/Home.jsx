@@ -9,6 +9,7 @@ import { getMenuItems } from "../features/menu/menuSlice";
 export default function Home() {
   const dispatch = useDispatch();
   const menuLists = useSelector((state) => state.menu);
+  // console.log(menuLists);
 
   useEffect(() => {
     dispatch(getMenuItems());

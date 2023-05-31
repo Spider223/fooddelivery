@@ -69,13 +69,13 @@ main{
     color: #202020;
 }
 
-/* .subtitle {
+.subtitle {
     line-height: 10px;
     font-size: 18px;
     font-family: "Opes Sans";
     font-weight: 600;
     color: #909090;
-} */
+}
 
 .counter {
      width: 15%;
